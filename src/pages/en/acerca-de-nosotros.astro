@@ -1,0 +1,145 @@
+---
+import C2AnimationParent from "../../components/AnimationParent.astro";
+import C2MainPage from "../../components/MainPage.astro";
+import C2NavHeader from "../../components/NavHeader.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+const { currentLocale } = Astro
+---
+
+<C2MainPage>
+  <section class="bg-[url('/aboutus.webp')] bg-cover bg-top min-h-[100vh]">
+    <C2NavHeader invisible={true} />
+    <C2AnimationParent>
+      <div class="w-10/12 text-center m-auto pt-40 3xl:pt-28">
+        <div
+          class="c2animate slide-in-blurred-left-long relative z-10 text-white dark:text-white 3xl:text-[10rem] 2xl:text-9xl text-8xl resp:text-6xl drop-shadow-xl shadow-black"
+        >
+          <h2 class="md:block hidden">We are C² Developer Group</h2>
+          <h2 class="md:hidden block">We are<br /> C² Developer Group</h2>
+        </div>
+        <h2
+          class="c2animate slide-in-blurred-left-long relative z-10 text-white dark:text-white font-['Smooch_Sans'] font-medium 2xl:text-7xl xl:text-5xl text-4xl resp:text-4xl"
+        >
+        A group of <b> developers and designers</b>
+        seeking to exponentially grow projects through<b>
+        websites, e-commerce, and mobile applications.
+          </b>
+        </h2>
+        <div class="c2animate slide-in-blurred-left-long">
+          <a href={getRelativeLocaleUrl(currentLocale ?? '', '#contacto')}>
+
+            <button
+              class="hover:bg-neutral-400 hover:bg-opacity-25 cursor-pointer border-[0.005rem] md:mt-6 mt-3 border-white text-white font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-5 px-3 md:py-3 py-2 rounded-2xl mb-20"
+            >
+            Contact Us
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="c2animate fade-in-bottom w-10/12 m-auto pt-20 pb-20">
+        <div
+          class="c2animate fade-in-bottom relative z-10 text-white 3xl:text-[10rem] xl:text-8xl text-8xl text-center resp:text-6xl transition duration-300 drop-shadow-xl shadow-black mt-80 mb-10"
+          class="c2animate fade-in-bottom relative z-10 text-white 3xl:text-[10rem] xl:text-8xl text-8xl resp:text-6xl drop-shadow-xl shadow-black mt-80 mb-10"
+        >
+          <h2 class="md:block hidden text-center">Somos C² Developer Group</h2>
+          <h2 class="md:hidden block">Somos <br /> C² Developer Group</h2>
+        </div>
+        <h2
+          class="c2animate fade-in-bottom relative z-10 text-white font-['Smooch_Sans'] font-medium 2xl:text-6xl xl:text-5xl text-3xl resp:text-3xl text-center"
+        >
+          Un grupo de <b>desarrolladores y diseñadores</b> que busca exponenciar
+          proyectos a través de <b
+            >páginas web, e-commerce y aplicaciones móviles.</b
+          >
+        </h2>
+        <div class="flex justify-center mt-5">
+          <button
+            class="c2animate fade-in-bottom hover:bg-neutral-400 hover:bg-opacity-25 cursor-pointer border-[0.005rem] md:mt-6 mt-3 border-white text-white font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-5 px-3 md:py-3 py-2 rounded-2xl mb-20"
+          >
+            Contáctanos
+          </button>
+        </div>
+      </div> -->
+    </C2AnimationParent>
+  </section>
+  <section>
+    <C2AnimationParent>
+      <div class="c2animate fade-in-bottom w-10/12 m-auto pb-16 pt-24">
+        <div
+          class="relative z-10 text-black dark:text-white 3xl:text-[6rem] xl:text-7xl text-6xl resp:text-5xl transition duration-300"
+        >
+          <h2 class="md:block hidden text-center">
+            "Don't let your dreams be<br /> dreams"
+          </h2>
+          <h2 class="md:hidden block text-center">
+            "Don't let your dreams be dreams"
+          </h2>
+        </div>
+        <h2
+          class="relative z-10 mr-40 resp:mr-5 resp:mt-5 text-black dark:text-white font-medium text-right 2xl:text-5xl xl:text-4xl text-3xl resp:text-3xl transition duration-300"
+        >
+          <span class="font-sans">{"~"}</span>SHIA LABEOUF
+        </h2>
+      </div>
+    </C2AnimationParent>
+  </section>
+  <section>
+    <div
+      class="bg-[url('/110428-black-and-blue-blurred-background-vector.webp')] bg-cover bg-center w-full p-10"
+    >
+      <h2 class="text-white md:text-7xl text-5xl resp:text-4xl text-center font-medium">
+        We bet on anyone
+      </h2>
+    </div>
+    <C2AnimationParent>
+      <div
+        class="c2animate slide-in-blurred-left w-full p-20 flex resp:items-center resp:hidden"
+      >
+        <div class="flex justify-center w-64 mr-20 resp:hidden">
+          <img
+            id="c2dev-nuestro-enfoque-image"
+            src="/c2squarelogoblack.png"
+            class="resp:w-48 w-64"
+          />
+        </div>
+        <h2
+          class="md:text-[5.6rem] sm:text-5xl text-4xl text-black text-right resp:hidden"
+        >
+        With plans that adapt to your project
+        </h2>
+      </div>
+      <h2 class="text-4xl text-black text-center hidden resp:block mt-10">
+        With plans that adapt to your <br />project
+      </h2>
+      <p
+        class="c2animate slide-in-blurred-left text-black md:text-4xl text-2xl text-center md:text-left mx-20 resp:mt-5 resp:mx-8 mb-20"
+      >
+      At C² Developer Group, we care about everyone, and that's why we have designed a variety of plans that can adapt to your project. We know and guarantee that with our services, your company's online presence will increase, traffic will favor your sales, and you will become known with a quality product, thoughtfully designed to exponentially grow your business.
+      </p>
+    </C2AnimationParent>
+  </section>
+  <section
+    class="bg-[url('/110428-black-and-blue-blurred-background-vector.webp')] bg-cover bg-center transition duration-300 py-10 flex flex-col items-center gap-5 p-6 bg-black"
+  >
+    <div class="w-3/5 resp:w-11/12">
+      <h2
+        class="text-white md:text-4xl font-['Bebas_Neue'] md:block hidden text-center"
+      >
+      Are you ready to create your website or application <br />
+      with us?
+      </h2>
+      <h2
+        class="text-white text-3xl font-['Bebas_Neue'] md:hidden block text-center"
+      >
+      Are you ready to create your website or application with us?
+      </h2>
+      <div class="flex justify-center">
+        <button
+          class="hover:bg-neutral-400 hover:bg-opacity-25 cursor-pointer transition duration-300 border-[0.005rem] md:mt-6 mt-3 border-white text-white font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-5 px-3 md:py-3 py-2 rounded-2xl"
+        >
+          Contact us
+        </button>
+      </div>
+    </div>
+  </section>
+</C2MainPage>

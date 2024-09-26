@@ -1,0 +1,141 @@
+---
+import C2AnimationParent from "../../../components/AnimationParent.astro";
+import C2MainPage from "../../../components/MainPage.astro";
+import C2NavHeader from "../../../components/NavHeader.astro";
+---
+
+<C2MainPage>
+  <section class="">
+    <C2NavHeader invisible={true} />
+    <h2
+      class="text-center text-6xl mt-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950"
+    >
+      E-commerce
+    </h2>
+    <C2AnimationParent intersectionThreshold={0}>
+      <div
+        class="c2animate fade-in-bottom flex gap-24 fluent:gap-5 justify-center fluent:flex-col mt-3"
+      >
+        <!-- Plan plus -->
+        <div class="mb-10 resp:mb-0">
+          <div class="flex justify-center mb-2">
+            <div
+              class="shadow-[0_0_20px_0_rgba(0,0,0,0.15)] resp:w-[21rem] w-[30rem] h-[34rem] mt-5 rounded-3xl"
+            >
+              <h2 class="text-center text-4xl mt-5">Plan plus</h2>
+              <p class="text-center text-[18px] mt-6 mx-10 font-bold">
+                Ideal para los emprendimientos que desean crecer y expandir su
+                tienda online.
+              </p>
+              <div class="flex mt-8 items-baseline gap-2 justify-center">
+                <h2 class="text-[#1843A2] text-5xl">$90+</h2>
+                <h2 class="text-[#1843A2] text-xl">Al mes</h2>
+              </div>
+              <div class="flex justify-center">
+                <a href="./plan1/contacto">
+                  <button
+                    class="hover:text-blue-800 hover:border-blue-800 cursor-pointer transition duration-300 border-[0.005rem] md:mt-2 mt-3 border-black text-black font-['Smooch_sans'] font-bold 4xl:text-4xl md:text-[30px] text-xl md:px-8 px-3 md:py-2 py-2 rounded-[19px]"
+                  >
+                    Adquirir
+                  </button>
+                </a>
+              </div>
+              <ul class="mx-10 text-xl mt-5 font-bold">
+                <li>• 1 página principal.</li>
+                <li>• 3 + landing pages.</li>
+                <li>• Optimización SEO básico.</li>
+                <li>
+                  • Diseño predeterminado (puedes escoger entre nuestros
+                  templates).
+                </li>
+                <li>• Procesamiento de pagos con tarjetas extranjeras.</li>
+                <li>• 1000 + compras al día.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex">
+            <a href="/" class="resp:w-64">
+              <p
+                class="resp:ml-14 fluent:ml-48 ml-3 mt-2 text-neutral-400 text-2xl font-bold underline hover:text-blue-800 transition duration-300"
+              >
+                Ver referencia
+              </p>
+            </a>
+          </div>
+        </div>
+        <!-- Plan personalizado -->
+        <div class="mb-10">
+          <div class="flex justify-center mb-2">
+            <div
+              class="shadow-[0_0_20px_0_rgba(0,0,0,0.15)] resp:w-[21rem] w-[30rem] h-[34rem] mt-5 rounded-3xl"
+            >
+              <h2 class="text-center text-4xl mt-5">Plan personalizado</h2>
+              <p class="text-center text-[18px] mt-2 mx-10 font-bold">
+                Trabajaremos estrechamente contigo para comprender tus
+                necesidades específicas y haremos realidad tu proyecto.
+              </p>
+              <h2 class="text-[#1843A2] text-center text-5xl mt-7">
+                A consultar
+              </h2>
+              <div class="flex justify-center">
+                <a href="./custom/contacto">
+                  <button
+                    class="hover:text-blue-800 hover:border-blue-800 cursor-pointer transition duration-300 border-[0.005rem] md:mt-2 mt-3 border-black text-black font-['Smooch_sans'] font-bold 4xl:text-4xl md:text-[30px] text-xl md:px-5 px-3 md:py-2 py-2 rounded-[19px]"
+                  >
+                    Contáctanos
+                  </button>
+                </a>
+              </div>
+              <ul class="mx-8 text-xl mt-5 font-bold">
+                <li>• 1 página principal.</li>
+                <li>• 3 + landing pages.</li>
+                <li>• Optimizacion SEO avanzado.</li>
+                <li>• Diseño personalizado.</li>
+                <li>
+                  • Procesamiento de pagos con tarjetas extranjeras o pago
+                  móvil.
+                </li>
+                <li>• 1000 + compras al día.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex">
+            <a href="/" class="resp:w-64">
+              <p
+                class="resp:ml-14 fluent:ml-48 ml-3 mt-2 text-neutral-400 text-2xl font-bold underline hover:text-blue-800 transition duration-300"
+              >
+                Ver referencia
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </C2AnimationParent>
+  </section>
+  <section
+    class="bg-[url('/110428-black-and-blue-blurred-background-vector.webp')] bg-cover bg-center"
+  >
+    <h2 class="text-7xl text-center text-white pt-20">
+      Hosting y mantenimiento
+    </h2>
+    <p
+      class="text-white text-center resp:text-3xl text-4xl font-bold max-w-[60rem] m-auto mt-10 px-5 tiny:px-16 md:px-5"
+    >
+      Nos encargamos de alojar tu sitio web en servidores seguros y confiables,
+      garantizando un rendimiento óptimo. Además, nuestro equipo se encarga del
+      mantenimiento continuo para que tú puedas centrarte en tu negocio. Todos
+      nuestros planes de E-commerce incluyen nuestros servicios de alojamiento y
+      mantenimiento. ¡Disfruta de la tranquilidad de tener tu presencia online
+      siempre activa!
+    </p>
+    <div class="flex justify-center mt-8 pb-20">
+      <a href="./custom/contacto">
+        <button
+          class="hover:bg-neutral-400 hover:bg-opacity-25 cursor-pointer transition duration-300 border-[0.005rem] border-white text-white font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-5 px-3 md:py-3 py-2 rounded-3xl"
+        >
+          Contáctanos
+        </button>
+      </a>
+    </div>
+  </section>
+</C2MainPage>

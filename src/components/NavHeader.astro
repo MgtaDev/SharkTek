@@ -1,8 +1,9 @@
 ---
 import { FaBars, FaStore } from "react-icons/fa/index";
 import { MdApps, MdPhoneIphone, MdDevices } from "react-icons/md/index";
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import LanguagueSwitch from '../components/LanguagueSwitch.astro'
 
-// import "../css/main.css";
 
 interface Props {
   invisible?: boolean;
@@ -11,13 +12,17 @@ interface Props {
 const { invisible = false } = Astro.props;
 const idPrefix = invisible ? "invisible-" : "";
 const headerClassPrefix = invisible ? "invisible" : "fixed";
+import { useTranslations, getLangFromUrl } from '../i18n/utils.ts'
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const { currentLocale } = Astro
 ---
 
 <header
   id={`--c2dev-${idPrefix}navbar-header`}
   class={`${headerClassPrefix} flex justify-between items-center z-[100] w-[100vw] py-3 font-serif text-gray-900 bg-white top-0 left-0 transition duration-300`}
 >
-  <a href="/">
+  <a href={getRelativeLocaleUrl(currentLocale ?? '', '')}>
     <!-- <img src="/c2logoblack.png" class="h-16 ml-10 lg:ml-10 cursor-pointer"/> -->
     <svg
       id={`--c2dev-${idPrefix}navbar-c2logo`}
@@ -89,10 +94,10 @@ const headerClassPrefix = invisible ? "invisible" : "fixed";
     <ul class="flex items-center resp:mt-5 resp:flex-col">
       <li class="my-2.5">
         <a
-          href="/"
+          href={getRelativeLocaleUrl(currentLocale ?? '', '')}
           class="text-2xl font-medium ml-10 hover:text-blue-700 hover:transition-all duration-300 resp:m-0"
         >
-          Inicio
+        {t('nav.home')}
         </a>
       </li>
       <li class="my-2.5">
@@ -101,34 +106,22 @@ const headerClassPrefix = invisible ? "invisible" : "fixed";
           href="#servicios"
           class="text-2xl font-medium ml-10 hover:text-blue-700 hover:transition-all duration-300 resp:m-0"
         >
-          Servicios
+        {t('nav.services')}
         </a>
       </li>
-      <li class="my-2.5">
+     
+      <li class="my-2.5 mr-6">
         <a
-          href="/proyectos/"
+          href={getRelativeLocaleUrl(currentLocale ?? '', 'acerca-de-nosotros')}
           class="text-2xl font-medium ml-10 hover:text-blue-700 hover:transition-all duration-300 resp:m-0"
         >
-          Proyectos
+        {t('nav.about')}
         </a>
       </li>
-      <li class="my-2.5">
-        <a
-          href="/acerca-de-nosotros/"
-          class="text-2xl font-medium ml-10 hover:text-blue-700 hover:transition-all duration-300 resp:m-0"
-        >
-          Acerca de nosotros
-        </a>
-      </li>
-      <li class="my-2.5">
-        <a
-          href="/unete-a-nuestro-equipo/"
-          class="text-2xl font-medium ml-10 mr-6 hover:text-blue-700 hover:transition-all duration-300 resp:m-0"
-        >
-          Únete a nuestro equipo
-        </a>
-      </li>
+      <LanguagueSwitch/>
+    
     </ul>
+    
   </nav>
 </header>
 {
@@ -140,7 +133,8 @@ const headerClassPrefix = invisible ? "invisible" : "fixed";
       >
         <div class="mb-4">
           <a
-            href="/servicios/paginas-web/"
+            href=
+            {getRelativeLocaleUrl(currentLocale ?? '', 'servicios/paginas-web')}
             class="font-['Smooch_Sans'] font-regular text-2xl hover:text-blue-700 hover:transition-all duration-300 mt-4"
           >
             <div class="flex gap-4 items-center">
@@ -153,7 +147,7 @@ const headerClassPrefix = invisible ? "invisible" : "fixed";
         </div>
         <div class="mb-4">
           <a
-            href="/servicios/aplicaciones-moviles/"
+          href={getRelativeLocaleUrl(currentLocale ?? '', 'servicios/aplicaciones-moviles')}
             class="font-['Smooch_Sans'] font-regular text-2xl hover:text-blue-700 hover:transition-all duration-300"
           >
             <div class="flex gap-4 items-center">
@@ -166,7 +160,7 @@ const headerClassPrefix = invisible ? "invisible" : "fixed";
         </div>
         <div class="mb-4">
           <a
-            href="/servicios/catalogos/"
+            href={getRelativeLocaleUrl(currentLocale ?? '', 'servicios/catalogos')}
             class="font-['Smooch_Sans'] font-regular text-2xl hover:text-blue-700 hover:transition-all duration-300"
           >
             <div class="flex gap-4 items-center">
@@ -179,7 +173,7 @@ const headerClassPrefix = invisible ? "invisible" : "fixed";
         </div>
         <div>
           <a
-            href="/servicios/e-commerce/"
+            href={getRelativeLocaleUrl(currentLocale ?? '', 'servicios/e-commerce')}
             class="font-['Smooch_Sans'] font-regular text-2xl hover:text-blue-700 hover:transition-all duration-300"
           >
             <div class="flex gap-4 items-center">

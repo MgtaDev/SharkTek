@@ -5,9 +5,12 @@ import C2Navbar from "../components/Navbar.astro";
 
 import "../css/main.scss";
 import "@splidejs/splide/css";
+
+const { currentLocale } = Astro.props
+console.log(currentLocale)
 ---
 
-<html lang="es" class="light">
+<html lang={currentLocale} class="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/c2logosquare.png" />

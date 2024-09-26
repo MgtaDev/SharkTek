@@ -3,6 +3,11 @@ import { FaStore } from "react-icons/fa/index";
 import { IoPhonePortraitOutline } from "react-icons/io5/index";
 import { MdApps, MdDevices } from "react-icons/md/index";
 import C2AnimationParent from "./AnimationParent.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const { currentLocale } = Astro
 ---
 
 <div>
@@ -10,6 +15,7 @@ import C2AnimationParent from "./AnimationParent.astro";
     <div
       class="flex flex-row w-full tallratio:min-h-0 tallratio:h-auto bg-none bg-contain bg-no-repeat bg-right-bottom"
     >
+
       <img
         class="c2animate slide-in-blurred-right-proyectos absolute -z-30 resp:hidden w-[60vw] max-w-[1800px] h-[auto] max-h-[900px] object-contain object-right-bottom right-0"
         src="/E-commerceC2LandingPage-croppedresp.webp"
@@ -30,7 +36,7 @@ import C2AnimationParent from "./AnimationParent.astro";
             <p
               class="4xl:text-9xl 3xl:text-7xl 2xl:text-7xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-['Bebas_Neue'] h-auto"
             >
-              E-Commerce
+            {t('ww2.Ecommerce')}
             </p>
           </div>
         </div>
@@ -38,18 +44,17 @@ import C2AnimationParent from "./AnimationParent.astro";
           class="c2animate slide-in-blurred-left-proyectos 3xl:text-6xl xl:text-5xl md:text-3xl text-xl 2xl:mt-20 tallratio:mt-5 mt-5 h-auto md:w-[40%] text-center md:text-start tallratio:w-full"
         >
           <span>
-            Creamos tiendas en línea a medida, seguras y móviles. Maximizamos tu
-            presencia digital con enfoque en seguridad y personalización.
+          {t('ww2.EcommerceText')}
           </span>
         </p>
         <p
           class="c2animate fade-in-bottom !delay-[1.2s] 2xl:mt-32 md:mt-10 mt-10"
         >
-          <a href="/servicios/e-commerce">
+          <a href={getRelativeLocaleUrl(currentLocale ?? '', 'servicios/e-commerce')} >
             <button
               class="w-auto bg-transparent border-[0.005rem] md:mt-3 border-black text-black hover:border-blue-700 hover:text-blue-700 transition duration-300 cursor-pointer font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-8 px-3 md:py-3 py-2 rounded-3xl"
             >
-              Ver planes
+             {t('ww2.viewPlansBtn')}
             </button>
           </a>
         </p>
@@ -78,7 +83,7 @@ import C2AnimationParent from "./AnimationParent.astro";
             <p
               class="4xl:text-9xl 3xl:text-7xl 2xl:text-7xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-['Bebas_Neue'] h-auto"
             >
-              Portafolio y Catálogos
+           {t('ww2.Catalog&Portfolios')}
             </p>
             <div
               class="bg-violet-700 3xl:w-[8rem] 2xl:w-[7rem] xl:w-[6rem] md:w-[5rem] w-[3rem] 3xl:h-[8rem] 2xl:h-[7rem] xl:h-[6rem] md:h-[5rem] h-[3rem] rounded-full text-white 3xl:text-6xl 2xl:text-5xl xl:text-4xl md:text-3xl text-xl flex items-center justify-center"
@@ -93,19 +98,17 @@ import C2AnimationParent from "./AnimationParent.astro";
           class="c2animate slide-in-blurred-right-proyectos 3xl:text-6xl xl:text-5xl md:text-3xl text-xl 2xl:mt-20 tallratio:mt-5 mt-5 h-auto md:w-[50%] text-center md:text-end tallratio:w-full"
         >
           <span>
-            Transformamos tu contenido en una poderosa herramienta de exhibición
-            online. Dale vida a tu catálogo y destaca tu portafolio de manera
-            digital.
+          {t('ww2.Catalog&PortfoliosText')}
           </span>
         </p>
         <p
           class="c2animate fade-in-bottom !delay-[1.2s] 2xl:mt-32 md:mt-10 mt-10"
         >
-          <a href="/servicios/catalogos">
+          <a href={getRelativeLocaleUrl(currentLocale ?? '', 'servicios/catalogos')}>
             <button
               class="w-auto bg-transparent border-[0.005rem] md:mt-3 mt-1 border-black text-black hover:border-blue-700 hover:text-blue-700 cursor-pointer font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-8 px-3 md:py-3 py-2 rounded-3xl"
             >
-              Ver planes
+             {t('ww2.viewPlansBtn')}
             </button>
           </a>
         </p>
@@ -144,7 +147,7 @@ import C2AnimationParent from "./AnimationParent.astro";
             <p
               class="4xl:text-9xl 3xl:text-7xl 2xl:text-7xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-['Bebas_Neue'] h-auto"
             >
-              Páginas Web Responsivas
+             {t('ww2.ResponsiveWebPages')}
             </p>
           </div>
         </div>
@@ -152,20 +155,18 @@ import C2AnimationParent from "./AnimationParent.astro";
           class="c2animate slide-in-blurred-left-proyectos 3xl:text-6xl xl:text-5xl md:text-3xl text-xl 2xl:mt-20 tallratio:mt-5 mt-5 h-auto md:w-[40%] text-center md:text-start tallratio:w-full"
         >
           <span>
-            Optimizamos tu presencia digital para todos los dispositivos. Desde
-            smartphones hasta computadoras, garantizamos una experiencia
-            impecable en cada dispositivo.
+         {t('ww2.ResponsiveWebPagesText')}
             <span class="hidden bg-blue-500"></span>
           </span>
         </p>
         <p
           class="c2animate fade-in-bottom !delay-[1.2s] 2xl:mt-32 md:mt-10 mt-10"
         >
-          <a href="/servicios/paginas-web">
+          <a href={getRelativeLocaleUrl(currentLocale ?? '', 'servicios/paginas-web')}>
             <button
               class="w-auto bg-transparent border-[0.005rem] md:mt-3 mt-1 border-black text-black hover:border-blue-700 hover:text-blue-700 transition duration-300 cursor-pointer font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-8 px-3 md:py-3 py-2 rounded-3xl"
             >
-              Ver planes
+         {t('ww2.viewPlansBtn')}
             </button>
           </a>
         </p>
@@ -196,7 +197,7 @@ import C2AnimationParent from "./AnimationParent.astro";
             <p
               class="4xl:text-9xl 3xl:text-7xl 2xl:text-7xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-['Bebas_Neue'] h-auto"
             >
-              Aplicación móvil
+              {t('ww2.MobileApps')}
             </p>
             <div
               class="bg-yellow-400 3xl:w-[8rem] 2xl:w-[7rem] xl:w-[6rem] md:w-[5rem] w-[3rem] 3xl:h-[8rem] 2xl:h-[7rem] xl:h-[6rem] md:h-[5rem] h-[3rem] rounded-full text-black 3xl:text-6xl 2xl:text-5xl xl:text-4xl md:text-3xl text-xl flex items-center justify-center"
@@ -212,19 +213,17 @@ import C2AnimationParent from "./AnimationParent.astro";
           class="c2animate slide-in-blurred-right-proyectos 3xl:text-6xl xl:text-5xl md:text-3xl text-xl 2xl:mt-20 tallratio:mt-5 mt-5 h-auto md:w-[50%] text-center md:text-end tallratio:w-full"
         >
           <span>
-            Transformamos tus ideas en aplicaciones móviles impactantes.
-            Desarrollamos soluciones personalizadas, intuitivas y funcionales
-            que llevan tu marca a nuevas alturas en el mundo móvil.
+           {t('ww2.MobileAppsText')}
           </span>
         </p>
         <p
           class="c2animate fade-in-bottom !delay-[1.2s] 2xl:mt-32 md:mt-10 mt-10"
         >
-          <a href="/servicios/aplicaciones-moviles">
+        <a href={getRelativeLocaleUrl(currentLocale ?? '', 'servicios/aplicaciones-moviles')}>
             <button
               class="w-auto bg-transparent border-[0.005rem] md:mt-3 mt-1 border-black text-black hover:border-blue-700 hover:text-blue-700 transition duration-300 cursor-pointer font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-8 px-3 md:py-3 py-2 rounded-3xl"
             >
-              Ver planes
+             {t('ww2.viewPlansBtn')}
             </button>
           </a>
         </p>

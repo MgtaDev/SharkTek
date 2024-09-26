@@ -1,11 +1,13 @@
 ---
-import { MarqueeComponent } from "../components/MarqueeCustomers";
-import C2AnimationParent from "../components/AnimationParent.astro";
-import C2MainPage from "../components/MainPage.astro";
-import C2NavHeader from "../components/NavHeader.astro";
-import C2ProyectosCarousel from "../components/ProyectosCarousel.astro";
-import C2ReviewCarousel from "../components/ReviewCarousel.astro";
-import C2WhatWeDo from "../components/WhatWeDo.astro";
+import { MarqueeComponent } from "../../components/MarqueeCustomers";
+import C2AnimationParent from "../../components/AnimationParent.astro";
+import C2MainPage from "../../components/MainPage.astro";
+import C2NavHeader from "../../components/NavHeader.astro";
+// import C2ProyectosCarousel from "../../components/ProyectosCarousel.astro";
+import C2ReviewCarousel from "../../components/ReviewCarousel.astro";
+import C2WhatWeDo from "../../components/WhatWeDo.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+const { currentLocale } = Astro
 ---
 
 <C2MainPage>
@@ -28,7 +30,7 @@ import C2WhatWeDo from "../components/WhatWeDo.astro";
           E-commerce, páginas web y aplicaciones.
         </h2>
         <div class="c2animate slide-in-blurred-left-long">
-          <a href="/#contacto">
+          <a href={getRelativeLocaleUrl(currentLocale ?? '', '#contacto')}>
             <button
               class="hover:bg-neutral-400 hover:bg-opacity-25 cursor-pointer border-[0.005rem] md:mt-6 mt-3 border-white text-white font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-5 px-3 md:py-3 py-2 rounded-3xl mb-20"
             >
@@ -162,7 +164,7 @@ import C2WhatWeDo from "../components/WhatWeDo.astro";
       </div>
     </C2AnimationParent>
   </section>
-  <section id="proyectos">
+  <!-- <section id="proyectos">
     <h2 class="md:text-6xl text-4xl text-center mt-20 2xl:mt-40">
       Algunos de nuestros trabajos
     </h2>
@@ -178,7 +180,7 @@ import C2WhatWeDo from "../components/WhatWeDo.astro";
         </button>
       </a>
     </div>
-  </C2AnimationParent>
+  </C2AnimationParent> -->
   <!-- <div>
     <a href="/proyectos" class="my-20 ml-8 block">
       <p

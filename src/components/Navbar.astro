@@ -2,8 +2,11 @@
 import C2NavHeader from "./NavHeader.astro";
 import { FaStore } from "react-icons/fa/index";
 import { MdApps, MdPhoneIphone, MdDevices } from "react-icons/md/index";
-
+import { useTranslations, getLangFromUrl } from '../i18n/utils.ts'
 // import "../css/main.css";
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div
@@ -17,7 +20,7 @@ import { MdApps, MdPhoneIphone, MdDevices } from "react-icons/md/index";
         href="/"
         class="text-xl font-bold ml-10 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
-        Inicio
+        {t('nav.home')}
       </a>
     </li>
     <li id="--c2dev-navbar-mobile-item-servicios" class="my-2.5">
@@ -26,7 +29,7 @@ import { MdApps, MdPhoneIphone, MdDevices } from "react-icons/md/index";
         class="text-xl font-bold ml-10 hover:text-neutral-700 hover:transition-all fluent:m-0 after:content-['►']"
       >
         <span class="hidden after:content-['▼']"></span>
-        Servicios
+       {t('nav.services')}
       </span>
     </li>
     <li class="my-2.5 hamburger-menu-servicios w-full hidden">
@@ -108,7 +111,7 @@ import { MdApps, MdPhoneIphone, MdDevices } from "react-icons/md/index";
         href="/acerca-de-nosotros/"
         class="text-xl font-bold ml-10 mr-6 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
-        Acerca de nosotros
+      { t('nav.about')}
       </a>
     </li>
     <li class="my-2.5">

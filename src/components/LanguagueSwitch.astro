@@ -1,0 +1,47 @@
+---
+// LanguageFlagSwitch.astro
+const languages = [
+  { code: 'es', name: 'Español', flag: '/public/Bandera_de_España.png' },
+  { code: 'en', name: 'English', flag: '/public/Bandera_USA.png' }
+];
+
+const { currentLocale } = Astro;
+const currentLanguage = languages.find(l => l.code === currentLocale);
+---
+
+<button
+  id="language-flag-switch"
+  class="inline-flex items-center justify-center w-10 h-10 shadow-sm bg-white text-2xl transition-all duration-300 hover:scale-110"
+  aria-label="Cambiar idioma / Change language"
+>
+  <span id="language-flag" class="border border-r-2">
+    <img src={currentLanguage?.flag} alt="">
+  </span>
+</button>
+
+<script define:vars={{ languages, currentLang: currentLocale }}>
+  const flagSwitch = document.getElementById('language-flag-switch');
+
+  function changeLanguage() {
+    const currentIndex = languages.findIndex(l => l.code === currentLang);
+    const nextIndex = (currentIndex + 1) % languages.length;
+    const newLang = languages[nextIndex].code;
+
+    const currentPath = window.location.pathname;
+    const currentSearch = window.location.search;
+    const currentHash = window.location.hash;
+
+    // Asegurar que siempre haya un prefijo de idioma
+    let newPath = currentPath.replace(/^\/(es|en)/, '');
+    newPath = `/${newLang}${newPath}`;
+
+    if (newPath !== '/' && newPath.endsWith('/')) {
+      newPath = newPath.slice(0, -1);
+    }
+
+    // Lógica de cambio de URL para aplicar nuevo idioma
+    window.location.href = `${newPath}${currentSearch}${currentHash}`;
+  }
+
+  flagSwitch?.addEventListener('click', changeLanguage);
+</script>

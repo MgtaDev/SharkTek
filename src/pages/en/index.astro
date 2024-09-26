@@ -1,0 +1,330 @@
+---
+import { MarqueeComponent } from "../../components/MarqueeCustomers";
+import C2AnimationParent from "../../components/AnimationParent.astro";
+import C2MainPage from "../../components/MainPage.astro";
+import C2NavHeader from "../../components/NavHeader.astro";
+// import C2ProyectosCarousel from "../../components/ProyectosCarousel.astro";
+import C2ReviewCarousel from "../../components/ReviewCarousel.astro";
+import C2WhatWeDo from "../../components/WhatWeDo.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+const { currentLocale } = Astro
+---
+
+<C2MainPage>
+  <section
+    id="inicio"
+    class="bg-[url('/c2bg-main.webp')] bg-cover bg-bottom min-h-[100vh]"
+  >
+    <C2NavHeader invisible={true} />
+    <C2AnimationParent>
+      <div class="w-10/12 m-auto xl:pt-28 lg:pt-40 pt-36 3xl:pt-28">
+        <div
+          class="c2animate slide-in-blurred-left-long relative z-10 text-white dark:text-white 3xl:text-[10rem] xl:text-9xl text-8xl resp:text-6xl drop-shadow-xl shadow-black"
+        >
+          <h2 class="md:block hidden">We exponentially grow your <br /> project</h2>
+          <h2 class="md:hidden block">We exponentially grow your project</h2>
+        </div>
+        <h2
+          class="c2animate slide-in-blurred-left-long relative z-10 text-white dark:text-white font-['Smooch_Sans'] font-bold 2xl:text-7xl xl:text-5xl text-4xl resp:text-4xl"
+        >
+        E-commerce, websites, and applications.
+        </h2>
+        <div class="c2animate slide-in-blurred-left-long">
+          <a href={getRelativeLocaleUrl(currentLocale ?? '', '#contacto')}>
+            <button
+              class="hover:bg-neutral-400 hover:bg-opacity-25 cursor-pointer border-[0.005rem] md:mt-6 mt-3 border-white text-white font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-5 px-3 md:py-3 py-2 rounded-3xl mb-20"
+            >
+              Contact us
+            </button>
+          </a>
+        </div>
+      </div>
+    </C2AnimationParent>
+  </section>
+  <section class="m-auto flex gap-5 justify-evenly flex-wrap items-center">
+    <MarqueeComponent
+      logosTop={[
+        {
+          src: "/bynxlogoblack.png",
+          class:
+            "w-54 h-24 cursor-pointer hover:scale-110 transition duration-300",
+        },
+        {
+          src: "/serologoblack.png",
+          class:
+            "w-54 h-24 cursor-pointer hover:scale-110 transition duration-300",
+          href: "https://sero-project.vercel.app/",
+        },
+        {
+          src: "/jonoappslogoblack.png",
+          class:
+            "w-54 h-36 cursor-pointer hover:scale-110 transition duration-300",
+          href: "https://jonoapps.com",
+        },
+        {
+          src: "/melaologoblack.png",
+          class:
+            "w-54 h-24 cursor-pointer hover:scale-110 transition duration-300",
+        },
+        {
+          src: "/sebasphotographylogoblack.png",
+          class:
+            "w-54 h-40 cursor-pointer hover:scale-110 transition duration-300",
+        },
+        {
+          src: "/c2logoblack.png",
+          class:
+            "w-54 h-24 cursor-pointer hover:scale-110 transition duration-300",
+        },
+      ]}
+    />
+  </section>
+  <section class="to-40% pb-10">
+    <C2AnimationParent>
+      <div
+        class="c2animate fade-in-bottom flex justify-center px-20 mobl:px-10 3xl:px-48 3xl:mt-20 mt-5"
+      >
+        <div
+          id="c2dev-nuestro-enfoque-text"
+          class="resp:w-full w-3/5 xl:p-20 resp:text-center"
+        >
+          <h2 class="md:text-7xl sm:text-6xl text-5xl 3xl:text-9xl">
+            Our Approach
+          </h2>
+          <p
+            class="text-black text-2xl md:text-4xl 3xl:text-5xl mt-5 md:mt-10"
+          >
+            We provide a service of<b>applications and websites </b> with solid fundations
+            in<b>design and functionality</b> that make the company or organization
+            stand out on the internet
+          </p>
+        </div>
+        <div class="flex justify-center resp:hidden w-2/5 h-2/5 md:p-20">
+          <img
+            id="c2dev-nuestro-enfoque-image"
+            src="c2squarelogoblack.png"
+            class="resp:w-1/2 3xl:w-9/12"
+          />
+        </div>
+      </div>
+    </C2AnimationParent>
+  </section>
+  <section
+    id="servicios"
+    class="w-full flex flex-col items-center md:mt-20 mt-10"
+  >
+    <div
+      class="bg-[url('/110428-black-and-blue-blurred-background-vector.webp')] bg-cover bg-center w-full p-10"
+    >
+      <h2 class="text-white md:text-7xl text-5xl font-medium text-center">
+        ¿What We Do?
+      </h2>
+    </div>
+    <div
+      class="flex flex-col items-center w-full md:gap-y-28 gap-y-5 mt-10 tiny:mt-20 md:mt-28"
+    >
+      <C2WhatWeDo />
+    </div>
+  </section>
+  <section
+    class="bg-[url('/110428-black-and-blue-blurred-background-vector.webp')] bg-cover bg-center py-16 mt-40 flex flex-col items-center gap-5 p-6"
+  >
+    <h2
+      class="text-white md:text-7xl text-5xl 3xl:text-8xl font-medium text-center"
+    >
+    What They Say About Us
+    </h2>
+    <div class="w-[100%] md:mt-10 lg:mt-0 mt-4"></div>
+    <C2ReviewCarousel />
+  </section>
+  <section>
+    <C2AnimationParent>
+      <div
+        class="c2animate fade-in-bottom flex fluent:flex-col gap-10 lg:flex-row tallratio:min-h-0 tallratio:h-auto h-auto bg-none bg-contain bg-no-repeat bg-right-bottom mt-20 2xl:mt-10 px-16"
+      >
+        <div class="w-3/5 fluent:w-full fluent:text-center">
+          <h2
+            class="4xl:text-9xl 3xl:text-8xl 2xl:text-7xl xl:text-7xl lg:text-6xl text-5xl font-medium h-auto"
+          >
+          Maintenance and Support
+          </h2>
+          <p
+            class="text-xl md:text-4xl 2xl:text-5xl 3xl:text-6xl 2xl:mt-20 md:mt-10 tallratio:mt-5 mt-5 h-auto tallratio:w-full"
+          >
+          After launching your project, we continue to take care of it. With our maintenance service, 
+          we ensure it always functions well.
+          We make updates to keep it secure and improve its performance.
+          We are here to ensure your digital project's long-term success.
+          </p>
+        </div>
+        <div class="w-2/5 fluent:w-3/5 m-auto -z-10">
+          <img class="w-full object-contain object-right" src="/soporte.svg" />
+        </div>
+      </div>
+    </C2AnimationParent>
+  </section>
+  <!-- <section id="proyectos">
+    <h2 class="md:text-6xl text-4xl text-center mt-20 2xl:mt-40">
+      Some of Our Work
+    </h2>
+    <C2ProyectosCarousel />
+  </section>
+  <C2AnimationParent>
+    <div class="flex justify-center w-full my-10 c2animate fade-in-bottom">
+      <a href="/proyectos">
+        <button
+          class="w-auto bg-transparent border-[0.005rem] md:mt-3 mt-2 border-black text-black hover:border-blue-800 hover:text-blue-800 transition duration-300 cursor-pointer font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-10 px-8 md:py-3 py-2 rounded-3xl"
+        >
+        See More
+        </button>
+      </a>
+    </div>
+  </C2AnimationParent> -->
+  <!-- <div>
+    <a href="/proyectos" class="my-20 ml-8 block">
+      <p
+        class="md:text-4xl text-2xl font-bold underline hover:text-blue-800 transition duration-300"
+      >
+        Ver más proyectos {">"}
+      </p>
+    </a>
+  </div> -->
+  <section
+    id="contacto"
+    class="bg-[url('/110428-black-and-blue-blurred-background-vector.webp')] bg-cover bg-center transition duration-300 py-10 flex flex-col items-center gap-5 p-6 bg-black"
+  >
+    <h2 class="text-white md:text-4xl text-3xl font-['Bebas_Neue'] text-center">
+      Are you ready to create your website or application
+      <br class="hidden sm:block" />
+      with us?
+    </h2>
+  </section>
+  <section>
+    <div class="flex">
+      <div
+        class="xl:ms-[8%] xl:w-[42%] w-[50%] fluent:w-full p-20 mobl:p-10 flex justify-center"
+      >
+        <div class="w-full">
+          <h2 class="md:text-5xl text-3xl text-black mb-5">
+            Tell Us About Your Project
+          </h2>
+          <form
+            id="--c2dev-form-contact-inicio"
+            class="font-['Smooch_Sans'] md:text-2xl text-xl"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="First and Last Name*"
+              required
+              maxlength="100"
+              class="appearance-none text-black leading-tight focus:ring-0 focus:outline-none w-full mr-3 pb-2 mb-5 border-b border-blue-700"
+            />
+            <input
+              type="text"
+              name="email"
+              placeholder="Email Address*"
+              required
+              maxlength="100"
+              class="appearance-none text-black leading-tight focus:ring-0 focus:outline-none w-full mr-3 pb-2 mb-5 border-b border-blue-700"
+            />
+            <input
+              type="text"
+              name="number"
+              placeholder="Phone Number*"
+              required
+              maxlength="100"
+              class="appearance-none text-black leading-tight focus:ring-0 focus:outline-none w-full mr-3 pb-2 mb-5 border-b border-blue-700"
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              maxlength="100"
+              class="appearance-none text-black leading-tight focus:ring-0 focus:outline-none w-full mr-3 pb-2 mb-5 border-b border-blue-700"
+            />
+            <div>
+              <label for="service-select" class="text-gray-400">
+                Type of Service
+              </label>
+              <select
+                name="service-select"
+                id="service-select"
+                class="p-1 border border-blue-600 rounded-lg outline-blue-600 w-full"
+                required
+              >
+                <option disabled selected>Select an option</option>
+                <option value="pagina-web">Website</option>
+                <option value="aplicacion-movil">Mobile Application</option>
+                <option value="catalogo-o-portafolio">
+                  Catalog or Portfolio
+                </option>
+                <option value="e-commerce">E-Commerce</option>
+              </select>
+            </div>
+            <div
+              class="mt-5 flex flex-col border rounded-lg border-blue-700 p-2 mb-6"
+            >
+              <textarea
+                name="message"
+                placeholder="Message*"
+                class="appearance-none border-none text-black mr-3 leading-tight focus:ring-0 focus:outline-none resize-none"
+                required
+                maxlength="10000"
+                rows="6"></textarea>
+              <div class="flex justify-end">
+                <button
+                  class="bg-blue-600 rounded-full 2xl:w-8 2xl:h-8 md:w-7 md:h-7 w-7 h-7 p-[0.2rem] flex justify-center items-center hover:bg-blue-700 cursor-pointer"
+                >
+                  <img src="/send.svg" class="ml-[0.1rem] w-[80%] h-auto" />
+                </button>
+              </div>
+            </div>
+            <!-- <div class="flex flex-row justify-end w-full">
+              <button
+                class="hover:bg-blue-600 hover:text-white cursor-pointer transition duration-300 border-[0.005rem] border-blue-600 text-blue-600 font-['Bebas_Neue'] md:text-2xl text-xl md:px-5 px-3 md:py-3 py-2 rounded-2xl"
+              >
+                Enviar
+              </button>
+            </div> -->
+          </form>
+          <script>
+            let __c2dev_form_contact_inicio!: HTMLFormElement;
+
+            const submitForm = (event: SubmitEvent) => {
+              event.preventDefault();
+
+              const formData = new FormData(__c2dev_form_contact_inicio);
+              let name = formData.get("name");
+              let email = formData.get("email");
+              let number = formData.get("number");
+              let service = formData.get("service-select");
+              let subject = formData.get("subject");
+              let message = formData.get("message");
+              console.debug(`name: "${name}"`);
+              console.debug(`email: "${email}"`);
+              console.debug(`number: "${number}"`);
+              console.debug(`service: "${service}"`);
+              console.debug(`subject: "${subject}"`);
+              console.debug(`message: "${message}"`);
+            };
+
+            document.addEventListener("DOMContentLoaded", (_event) => {
+              __c2dev_form_contact_inicio = document.getElementById(
+                "--c2dev-form-contact-inicio"
+              )!! as HTMLFormElement;
+
+              __c2dev_form_contact_inicio.addEventListener(
+                "submit",
+                submitForm
+              );
+            });
+          </script>
+        </div>
+      </div>
+      <div class="w-[50%] flex justify-center items-center fluent:hidden">
+        <img src="/c2squarelogoblack.png" class="w-full max-w-[28rem]" />
+      </div>
+    </div>
+  </section>
+</C2MainPage>

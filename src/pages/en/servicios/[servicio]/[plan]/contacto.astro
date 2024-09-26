@@ -2,9 +2,9 @@
 import type { GetStaticPaths, InferGetStaticParamsType } from "astro";
 // import { Debug } from "astro:components";
 
-import C2AnimationParent from "../../../../components/AnimationParent.astro";
-import C2MainPage from "../../../../components/MainPage.astro";
-import C2NavHeader from "../../../../components/NavHeader.astro";
+import C2AnimationParent from "../../../../../components/AnimationParent.astro";
+import C2MainPage from "../../../../../components/MainPage.astro";
+import C2NavHeader from "../../../../../components/NavHeader.astro";
 
 export const getStaticPaths = (() => {
   const params = (servicio: string, plan: string) => {
@@ -57,7 +57,7 @@ const { servicio, plan } = Astro.params as Params;
         >
           <div class="w-full">
             <h2 class="md:text-5xl text-3xl text-black mb-5">
-              Cuéntanos tu proyecto
+              Tell us your project
             </h2>
             <form
               class="font-['Smooch_Sans'] md:text-2xl text-xl"
@@ -68,7 +68,7 @@ const { servicio, plan } = Astro.params as Params;
               <input
                 type="text"
                 name="name"
-                placeholder="Nombres y Apellidos*"
+                placeholder="Full Name*"
                 required
                 maxlength="100"
                 class="appearance-none text-black leading-tight focus:ring-0 focus:outline-none w-full mr-3 pb-2 mb-5 border-b border-blue-700"
@@ -76,7 +76,7 @@ const { servicio, plan } = Astro.params as Params;
               <input
                 type="email"
                 name="email"
-                placeholder="Correo electrónico*"
+                placeholder="Email*"
                 required
                 maxlength="100"
                 class="appearance-none text-black leading-tight focus:ring-0 focus:outline-none w-full mr-3 pb-2 mb-5 border-b border-blue-700"
@@ -84,7 +84,7 @@ const { servicio, plan } = Astro.params as Params;
               <input
                 type="tel"
                 name="number"
-                placeholder="Número de teléfono*"
+                placeholder="Phone Number*"
                 required
                 maxlength="100"
                 class="appearance-none text-black leading-tight focus:ring-0 focus:outline-none w-full mr-3 pb-2 mb-5 border-b border-blue-700"
@@ -92,7 +92,7 @@ const { servicio, plan } = Astro.params as Params;
               <input
                 type="text"
                 name="subject"
-                placeholder="Asunto"
+                placeholder="Subject"
                 maxlength="100"
                 class="appearance-none text-black leading-tight focus:ring-0 focus:outline-none w-full mr-3 pb-2 mb-5 border-b border-blue-700"
               />
@@ -101,7 +101,7 @@ const { servicio, plan } = Astro.params as Params;
               >
                 <textarea
                   name="message"
-                  placeholder="Mensaje*"
+                  placeholder="Message*"
                   class="appearance-none border-none text-black mr-3 leading-tight focus:ring-0 focus:outline-none resize-none"
                   required
                   maxlength="10000"

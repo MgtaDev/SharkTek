@@ -1,0 +1,194 @@
+---
+import C2AnimationParent from "../../../components/AnimationParent.astro";
+import C2MainPage from "../../../components/MainPage.astro";
+import C2NavHeader from "../../../components/NavHeader.astro";
+---
+
+<C2MainPage>
+  <section>
+    <C2NavHeader invisible={true} />
+    <h2
+      class="text-center text-6xl mt-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950"
+    >
+      Páginas web
+    </h2>
+    <!-- Planes -->
+    <C2AnimationParent intersectionThreshold={0}>
+      <div
+        class="c2animate fade-in-bottom flex flex-wrap gap-5 justify-evenly max-w-[1500px] mt-10 m-auto"
+      >
+        <!-- Plan básico -->
+        <div class="w-72">
+          <div
+            class="h-[34rem] shadow-[0_0_20px_0_rgba(0,0,0,0.15)] rounded-3xl p-5"
+          >
+            <h2 class="text-center text-4xl">Plan básico</h2>
+            <p class="text-center text-lg mt-6 font-bold">
+              Ideal para aquellos que desean tener una presencia online sólida y
+              estática.
+            </p>
+            <h2 class="text-[#1843A2] text-center text-5xl mt-16">$300</h2>
+            <div class="flex justify-center">
+              <a href="./plan1/contacto">
+                <button
+                  class="hover:text-blue-800 hover:border-blue-800 cursor-pointer transition duration-300 border-[0.005rem] md:mt-2 mt-3 border-black text-black font-['Smooch_sans'] font-bold 4xl:text-4xl md:text-[30px] text-xl md:px-8 px-3 md:py-2 py-2 rounded-[19px]"
+                >
+                  Adquirir
+                </button>
+              </a>
+            </div>
+            <ul class="text-2xl mt-5 font-bold">
+              <li>• 1 página principal.</li>
+              <li>• 1 vista adicional.</li>
+              <li>• Página estática.</li>
+              <li>
+                • Diseño predeterminado (Puede escoger entre nuestros
+                templates).
+              </li>
+            </ul>
+          </div>
+          <a href="/">
+            <p
+              class="ml-4 mt-2 text-neutral-400 text-2xl font-bold underline hover:text-blue-800 transition duration-300"
+            >
+              Ver referencia
+            </p>
+          </a>
+        </div>
+        <!-- Plan plus -->
+        <div class="w-72">
+          <div
+            class="h-[34rem] shadow-[0_0_20px_0_rgba(0,0,0,0.15)] rounded-3xl p-5"
+          >
+            <h2 class="text-center text-4xl">Plan Plus</h2>
+            <p class="text-center text-lg mt-6 font-bold">
+              Para aquellos que buscan un crecimiento digital con un diseño
+              atractivo y funcionalidades sencillas.
+            </p>
+            <h2 class="text-[#1843A2] text-center text-5xl mt-9">$500</h2>
+            <div class="flex justify-center">
+              <a href="./plan2/contacto">
+                <button
+                  class="hover:text-blue-800 hover:border-blue-800 cursor-pointer transition duration-300 border-[0.005rem] md:mt-2 mt-3 border-black text-black font-['Smooch_sans'] font-bold 4xl:text-4xl md:text-[30px] text-xl md:px-8 px-3 md:py-2 py-2 rounded-[19px]"
+                >
+                  Adquirir
+                </button>
+              </a>
+            </div>
+            <ul class="text-2xl mt-5 font-bold">
+              <li>• 1 página principal.</li>
+              <li>• 3 vistas adicionales.</li>
+              <li>• Funcionalidades sencillas.</li>
+              <li>• Diseño predeterminado / Puedes traer tu propio diseño.</li>
+            </ul>
+          </div>
+          <a href="/">
+            <p
+              class="ml-4 mt-2 text-neutral-400 text-2xl font-bold underline hover:text-blue-800 transition duration-300"
+            >
+              Ver referencia
+            </p>
+          </a>
+        </div>
+        <!-- Plan premium -->
+        <div class="w-72">
+          <div
+            class="h-[34rem] shadow-[0_0_20px_0_rgba(0,0,0,0.15)] rounded-3xl p-5"
+          >
+            <h2 class="text-center text-4xl">Plan Premium</h2>
+            <p class="text-center text-lg mt-6 font-bold">
+              Perfecto para empresas que buscan una plataforma con
+              funcionalidades avanzadas y altamente personalizada.
+            </p>
+            <h2 class="text-[#1843A2] text-center text-5xl mt-9">$800</h2>
+            <div class="flex justify-center">
+              <a href="./plan3/contacto">
+                <button
+                  class="hover:text-blue-800 hover:border-blue-800 cursor-pointer transition duration-300 border-[0.005rem] md:mt-2 mt-3 border-black text-black font-['Smooch_sans'] font-bold 4xl:text-4xl md:text-[30px] text-xl md:px-8 px-3 md:py-2 py-2 rounded-[19px]"
+                >
+                  Adquirir
+                </button>
+              </a>
+            </div>
+            <ul class="text-2xl mt-5 font-bold">
+              <li>• 1 página principal.</li>
+              <li>• 5 vistas adicionales.</li>
+              <li>• Funcionalidades avanzadas.</li>
+              <li>• Diseño personalizado.</li>
+            </ul>
+          </div>
+          <a href="/">
+            <p
+              class="ml-4 mt-2 text-neutral-400 text-2xl font-bold underline hover:text-blue-800 transition duration-300"
+            >
+              Ver referencia
+            </p>
+          </a>
+        </div>
+        <!-- Plan personalizado -->
+        <div class="w-72">
+          <div
+            class="h-[34rem] shadow-[0_0_20px_0_rgba(0,0,0,0.15)] rounded-3xl p-5"
+          >
+            <h2 class="text-center text-4xl">Plan Personalizado</h2>
+            <p class="text-center text-lg mt-6 font-bold">
+              Trabajaremos estrechamente contigo para comprender tus necesidades
+              específicas y haremos realidad tu proyecto.
+            </p>
+            <h2 class="text-[#1843A2] text-center text-5xl mt-9">
+              A consultar
+            </h2>
+            <div class="flex justify-center">
+              <a href="./custom/contacto">
+                <button
+                  class="hover:text-blue-800 hover:border-blue-800 cursor-pointer transition duration-300 border-[0.005rem] md:mt-2 mt-3 border-black text-black font-['Smooch_sans'] font-bold 4xl:text-4xl md:text-[30px] text-xl md:px-8 px-3 md:py-2 py-2 rounded-[19px]"
+                >
+                  Contáctanos
+                </button>
+              </a>
+            </div>
+            <ul class="text-2xl mt-5 font-bold">
+              <li>• 1 página principal.</li>
+              <li>• 8 + vistas adicionales.</li>
+              <li>• Optimizacion SEO.</li>
+              <li>• Diseño personalizado.</li>
+              <li>• Funcionalidades complejas.</li>
+            </ul>
+          </div>
+          <a href="/">
+            <p
+              class="ml-4 mt-2 text-neutral-400 text-2xl font-bold underline hover:text-blue-800 transition duration-300"
+            >
+              Ver referencia
+            </p>
+          </a>
+        </div>
+      </div>
+    </C2AnimationParent>
+  </section>
+  <section
+    class="mt-10 bg-[url('/110428-black-and-blue-blurred-background-vector.webp')] bg-cover bg-center"
+  >
+    <h2 class="text-7xl text-center text-white pt-20">
+      Hosting y mantenimiento
+    </h2>
+    <p
+      class="text-white text-center resp:text-3xl text-4xl font-bold max-w-[60rem] m-auto mt-10 px-5 tiny:px-16 md:px-5"
+    >
+      Nos encargamos de alojar tu sitio web en servidores seguros y confiables,
+      garantizando un rendimiento óptimo. Además, nuestro equipo se encarga del
+      mantenimiento continuo para que tú puedas centrarte en tu negocio.
+      ¡Consulta para obtener información y disfruta de la tranquilidad de tener
+      tu presencia online siempre activa!
+    </p>
+    <div class="flex justify-center mt-8 pb-20">
+      <a href="/servicios/hosting-mantenimiento/paginas-web/contacto">
+        <button
+          class="hover:bg-neutral-400 hover:bg-opacity-25 cursor-pointer transition duration-300 border-[0.005rem] border-white text-white font-['Bebas_Neue'] 4xl:text-4xl md:text-2xl text-xl md:px-5 px-3 md:py-3 py-2 rounded-3xl"
+        >
+          Contáctanos
+        </button>
+      </a>
+    </div>
+  </section>
+</C2MainPage>

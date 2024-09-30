@@ -1,5 +1,4 @@
 ---
-// LanguageFlagSwitch.astro
 const languages = [
   { code: 'es', name: 'Español', flag: '/Bandera_de_España.png' },
   { code: 'en', name: 'English', flag: '/Bandera_USA.png' }
@@ -35,7 +34,8 @@ const currentLanguage = languages.find(l => l.code === currentLocale);
     let newPath = currentPath.replace(/^\/(es|en)/, '');
     newPath = `/${newLang}${newPath}`;
 
-    if (newPath !== '/' && newPath.endsWith('/')) {
+    // Remover cualquier barra inclinada al final de la URL
+    if (newPath.endsWith('/')) {
       newPath = newPath.slice(0, -1);
     }
 

@@ -3,10 +3,14 @@ import C2NavHeader from "./NavHeader.astro";
 import { FaStore } from "react-icons/fa/index";
 import { MdApps, MdPhoneIphone, MdDevices } from "react-icons/md/index";
 import { useTranslations, getLangFromUrl } from '../i18n/utils.ts'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import LanguagueSwitch from "./LanguagueSwitch.astro";
 // import "../css/main.css";
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
+const { currentLocale } = Astro
+
 ---
 
 <div
@@ -37,7 +41,7 @@ const t = useTranslations(lang)
     </li>
     <li class="my-2.5 self-start hamburger-menu-servicios hidden">
       <a
-        href="/servicios/paginas-web/"
+        href={getRelativeLocaleUrl(currentLocale ?? '', 'servicios/paginas-web')}
         class="text-xl font-bold ml-10 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
         <div class="flex gap-2 items-center text-lg">
@@ -52,7 +56,7 @@ const t = useTranslations(lang)
     </li>
     <li class="my-2.5 self-start hamburger-menu-servicios hidden">
       <a
-        href="/servicios/aplicaciones-moviles/"
+        href=   {getRelativeLocaleUrl(currentLocale ?? '', 'servicios/aplicaciones-moviles')}
         class="text-xl font-bold ml-10 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
         <div class="flex gap-2 items-center text-lg">
@@ -67,7 +71,7 @@ const t = useTranslations(lang)
     </li>
     <li class="my-2.5 self-start hamburger-menu-servicios hidden">
       <a
-        href="/servicios/catalogos/"
+      href=   {getRelativeLocaleUrl(currentLocale ?? '', 'servicios/catalogos')}
         class="text-xl font-bold ml-10 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
         <div class="flex gap-2 items-center text-lg">
@@ -82,7 +86,7 @@ const t = useTranslations(lang)
     </li>
     <li class="my-2.5 self-start hamburger-menu-servicios hidden">
       <a
-        href="/servicios/e-commerce/"
+      href=   {getRelativeLocaleUrl(currentLocale ?? '', 'servicios/e-commerce')}
         class="text-xl font-bold ml-10 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
         <div class="flex gap-2 items-center text-lg">
@@ -98,30 +102,31 @@ const t = useTranslations(lang)
     <li class="my-2.5 hamburger-menu-servicios w-full hidden">
       <hr />
     </li>
-    <li class="my-2.5">
+    <!-- <li class="my-2.5">
       <a
         href="/proyectos/"
         class="text-xl font-bold ml-10 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
         Proyectos
       </a>
-    </li>
-    <li class="my-2.5">
+    </li> -->
+    <li class="my-2.5 ">
       <a
-        href="/acerca-de-nosotros/"
+      href=   {getRelativeLocaleUrl(currentLocale ?? '', 'acerca-de-nosotros')}
         class="text-xl font-bold ml-10 mr-6 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
       { t('nav.about')}
       </a>
     </li>
-    <li class="my-2.5">
+    <LanguagueSwitch/>
+    <!-- <li class="my-2.5">
       <a
         href="/unete-a-nuestro-equipo/"
         class="text-xl font-bold ml-10 mr-6 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
         Únete a nuestro equipo
       </a>
-    </li>
+    </li> -->
   </ul>
 </div>
 <C2NavHeader />

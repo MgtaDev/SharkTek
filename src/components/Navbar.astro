@@ -21,7 +21,7 @@ const { currentLocale } = Astro
     <li class="my-4"></li>
     <li class="my-2.5">
       <a
-        href="/"
+      href={getRelativeLocaleUrl(currentLocale ?? '', '')}
         class="text-xl font-bold ml-10 hover:text-blue-700 hover:transition-all duration-300 fluent:m-0"
       >
         {t('nav.home')}

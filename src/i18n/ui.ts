@@ -44,7 +44,11 @@ export const languages = {
       'ww2.MobileApps' : 'Mobile application',
       'ww2.MobileAppsText' : 'We transform your ideas into shocking mobile applications. We develop personalized, intuitive and functional solutions that lead your brand to new heights in the mobile world.',
 
-      'ww2.viewPlansBtn' : 'View plans'
+      'ww2.viewPlansBtn' : 'View plans',
+      'nav.services.web-pages': 'Web Pages',
+      'nav.services.mobile-apps': 'Mobile Applications',
+      'nav.services.catalogs-portfolios': 'Catalogs and Portfolios',
+      'nav.services.ecommerce': 'E-Commerce',
 
 
     },
@@ -92,7 +96,11 @@ export const languages = {
       'ww2.MobileApps' : 'Aplicación móvil',
       'ww2.MobileAppsText' : 'Transformamos sus ideas en aplicaciones móviles impactantes. Desarrollamos soluciones personalizadas, intuitivas y funcionales que llevan su marca a nuevas alturas en el mundo móvil.',
 
-      'ww2.viewPlansBtn' : 'Ver planes'
+      'ww2.viewPlansBtn' : 'Ver planes',
+      'nav.services.web-pages': 'Páginas Web',
+      'nav.services.mobile-apps': 'Aplicaciones Móviles',
+      'nav.services.catalogs-portfolios': 'Catálogos y Portafolios',
+      'nav.services.ecommerce': 'E-Commerce',
 
 
 

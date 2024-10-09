@@ -1,18 +1,18 @@
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
+// Fonts
+@import url('https://fonts.cdnfonts.com/css/h-hias-sans');
+@import url('https://fonts.cdnfonts.com/css/nexa');
 
 h2,
 h3 {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
+  font-family: 'h Hias Sans', sans-serif;
+  font-weight: 300;
 }
 
 p,
 ul,
 button {
-  font-family: "Smooch Sans", sans-serif;
-  font-weight: 500;
+  font-family: 'Nexa', sans-serif;
+  font-weight: 200;
 }
 
 .splide__arrow svg {
@@ -65,7 +65,7 @@ button {
 .splide__pagination li button.is-active:before {
   opacity: 1;
   background: #fff;
-  border: solid 3px #1c212c;
+  border: solid 3px #081d3d;
 }
 
 @media (prefers-reduced-motion: no-preference) {

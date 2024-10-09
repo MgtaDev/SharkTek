@@ -74,7 +74,7 @@
 .slick-dots-portfolio li.slick-active button:before {
   opacity: 1;
   background: #fff;
-  border: solid 3px #1c212c;
+  border: solid 3px #081d3d;
 }
 
 :root {
@@ -87,7 +87,7 @@
   width: 102%;
   height: 103%;
   border-radius: 10px;
-  background-image: linear-gradient(var(--rotate), #4a7eff, #073bd5);
+  background-image: linear-gradient(var(--rotate), #3170ca, #123565);
   position: absolute;
   z-index: -1;
   top: -1.5%;
@@ -106,7 +106,7 @@
   margin: 0 auto;
   transform: scale(0.8);
   filter: blur(calc(var(--card-height) / 10));
-  background-image: linear-gradient(var(--rotate), #4a7eff, #073bd5);
+  background-image: linear-gradient(var(--rotate), #3170ca, #123565);
   opacity: 1;
   transition: opacity 0.5s;
   animation: spin 3.5s linear infinite;

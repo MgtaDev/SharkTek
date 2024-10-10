@@ -16,11 +16,11 @@ export const languages = {
       'footer.slogan':'We exponentially grow your project',
       'footer.conctact-title': 'Contact',
       'footer.subscribe-title': 'Subscribe',
-      'footer.rights':'© 2023 Sharktek - All rights reserved',
+      'footer.rights':'© 2023 SharkTek - All rights reserved',
       'footer.developed-by' : 'Developed by SharkTek',
       'footer.newsletter-placeholder': 'Newsletter',
       // Reviews
-      'reviews.review1': 'We needed a website to promote our computer assistance and optimization technical services, Sharktek built the page from scratch and since then we have received a positive feedback from customers since presenting a page of this level of quality generates a engagement and catches the attention of people allowing you to see the type of work we do, our servivios, etc.',
+      'reviews.review1': 'We needed a website to promote our computer assistance and optimization technical services, Sharktek built the page from scratch and since then we have received a positive feedback from customers since presenting a page of this level of quality generates a engagement and catches the attention of people allowing you to see the type of work we do, our servicios, etc.',
 
       'reviews.review2': 'In beingØ we wanted to develop an app website for the management of data and procreo to a freelance, organization or company that had an immense information to organize and analyze in the long term in order to see the results of its progress and development. Sharktekhelped us optimize our system, fix bugs and prepare exceptional undesiño for the comfort of our users, we are fully grateful for their professionalism and good treatment with our team.',
 
@@ -56,37 +56,37 @@ export const languages = {
       'nav.home': 'Inicio',
       'nav.services': 'Servicios',
       'nav.about': 'Sobre Nosotros',
-      'footer.home' : 'Inicia',
+      'footer.home' : 'Inicio',
       'footer.services': 'Servicios',
       'footer.about': 'Acerca de',
       'footer.slogan':'Exponenciamos tu proyecto',
-      'footer.conctact-title': 'Conctacto',
-      'footer.subscribe-title': 'Subscríbete',
-      'footer.rights':'© 2023 Sharktek - Todos los derechos reservados',
+      'footer.conctact-title': 'Coctacto',
+      'footer.subscribe-title': 'Suscríbete',
+      'footer.rights':'© 2023 SharkTek - Todos los derechos reservados',
       'footer.developed-by' : 'Desarrollado por Sharktek',
       'footer.newsletter-placeholder': 'Boletín Informatívo',
       
       // Review 1
-      'reviews.review1': 'Necesitabamos un sitio web para promocionar nuestros servicios técnicos de asistencia y optimización de computadoras, Sharkteknos construyó la página desde cero y desde entonces hemos recibido un feedback positivo por parte de los clientes ya que presentar una página de este nivel de calidad genera un engagement y atrapa la atención de las personas permitiendo que pueden ver el tipo de trabajo que hacemos, nuestros servivios, etc.',
+      'reviews.review1': 'Necesitábamos un sitio web para promocionar nuestros servicios técnicos de asistencia y optimización de computadoras, Sharkteknos construyó la página desde cero y desde entonces hemos recibido un feedback positivo por parte de los clientes ya que presentar una página de este nivel de calidad genera interacciones que atrapan la atención de las personas permitiendo que pueden ver el tipo de trabajo que hacemos, nuestros servicios, etc.',
 
       // Review2
-      'reviews.review2': 'En SERØ queríamos desarrollar una web app para el manejo de datos yprogreso de un freelance, organización o empresa que tuviera una inmensacantidad de datos que organizar y analizar a largo plazo con el fin de ver los resultados de su progreso y desarrollo. Sharkteknos ayudó a optimizar nuestro sistema, arreglar bugs y elaborar undiseño excepcional para la comodidad de nuestros usuarios, estamoscompletamente agradecidos por su profesionalidad y buen trato con nuestro equipo.',
+      'reviews.review2': 'En SERØ queríamos desarrollar una web app para el manejo de datos y progreso de un freelance, organización o empresa que tuviera una inmensa cantidad de datos que organizar y analizar a largo plazo con el fin de ver los resultados de su progreso y desarrollo. Sharktek nos ayudó a optimizar nuestro sistema, arreglar bugs y elaborar un diseño excepcional para la comodidad de nuestros usuarios, estamos completamente agradecidos por su profesionalidad y buen trato con nuestro equipo.',
 
       // Review 3
-      'reviews.review3': 'Contratamos a Sharktekpara rediseñar la página web y darle un aire fresco y actualizado que causará una buena impresión, desde entonces hemos experimentado un aumento del 41% en nuestro tráfico y un aumento de 22% en la cantidad de conversiones. Los recomendamos a todas las compañías buscando mejorar su presencia en línea.',
+      'reviews.review3': 'Contratamos a Sharktek para rediseñar la página web y darle un aire fresco y actualizado que causará una buena impresión, desde entonces hemos experimentado un aumento del 41% en nuestro tráfico y un aumento de 22% en la cantidad de conversiones. Los recomendamos a todas las compañías buscando mejorar su presencia en línea.',
 
       // Review 4
-      'reviews.review4': 'Gracias a Sharktektenemos una excelente tienda online con un alto tráfico de clientes que compran a diario nuestras carteras, hemos recibido un gran feedback por el buen funcionamiento del sistema que nos desarrollaron y los recomendamos a cualquier empresa o marca que está comenzando en el mercado de venta de productos, realmente genera un gran progreso empresarial y optimiza muchas tareas con nuestros clientes.',
+      'reviews.review4': 'Gracias a Sharktek tenemos una excelente tienda online con un alto tráfico de clientes que compran a diario nuestras carteras, hemos recibido un gran feedback por el buen funcionamiento del sistema que nos desarrollaron y los recomendamos a cualquier empresa o marca que está comenzando en el mercado de venta de productos, realmente genera un gran progreso empresarial y optimiza muchas tareas con nuestros clientes.',
 
          // Review 5
-      'reviews.review5': 'Gracias a Sharktektenemos una excelente tienda online con un alto tráfico de clientes que compran a diario nuestras carteras, hemos recibido un gran feedback por el buen funcionamiento del sistema que nos desarrollaron y los recomendamos a cualquier empresa o marca que está comenzando en el mercado de venta de productos, realmente genera un gran progreso empresarial y optimiza muchas tareas con nuestros clientes.',
+      'reviews.review5': 'Gracias a Sharktek tenemos una excelente tienda online con un alto tráfico de clientes que compran a diario nuestras carteras, hemos recibido un gran feedback por el buen funcionamiento del sistema que nos desarrollaron y los recomendamos a cualquier empresa o marca que está comenzando en el mercado de venta de productos, realmente genera un gran progreso empresarial y optimiza muchas tareas con nuestros clientes.',
 
       // What we Do
       'ww2.Ecommerce' : 'E-commerce',
       'ww2.EcommerceText' : 'Creamos tiendas en línea a medida, seguras y móviles. Maximizamos tu presencia digital con enfoque en seguridad y personalización.',
 
       'ww2.Catalog&Portfolios' : 'Portafolio y Catálogos',
-      'ww2.Catalog&PortfoliosText' : 'Transformamos su contenido en una poderosa herramienta de exhibición en línea. Dale vida a tu catálogo y resalte tu cartera digital.',
+      'ww2.Catalog&PortfoliosText' : 'Transformamos su contenido en una poderosa herramienta de exhibición en línea. Dale vida a tu catálogo y resalta tu cartera digital.',
 
 
       'ww2.ResponsiveWebPages' : 'Páginas Web Responsivas',

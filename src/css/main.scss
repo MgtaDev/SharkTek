@@ -1,18 +1,25 @@
 // Fonts
 @import url('https://fonts.cdnfonts.com/css/h-hias-sans');
 @import url('https://fonts.cdnfonts.com/css/nexa');
+@import url('https://fonts.cdnfonts.com/css/mont');
 
 h2,
 h3 {
-  font-family: 'h Hias Sans', sans-serif;
-  font-weight: 300;
+  // font-family: 'h Hias Sans', sans-serif;
+  font-family: 'Mont', sans-serif;                                     
+  font-weight: 600;
+  font-size: 40px !important;
 }
 
 p,
 ul,
 button {
   font-family: 'Nexa', sans-serif;
+  // font-family: 'Mont', sans-serif;                                
   font-weight: 200;
+  font-size: 18px !important;
+
+
 }
 
 .splide__arrow svg {

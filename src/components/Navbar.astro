@@ -5,7 +5,6 @@ import { MdApps, MdPhoneIphone, MdDevices } from "react-icons/md/index";
 import { useTranslations, getLangFromUrl } from '../i18n/utils.ts'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import LanguagueSwitch from "./LanguagueSwitch.astro";
-// import "../css/main.css";
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -117,8 +116,9 @@ const { currentLocale } = Astro
       { t('nav.about')}
       </a>
     </li>
-
-    <LanguagueSwitch/>
+    <li>
+      <LanguagueSwitch/>
+    </li>
     <!-- <li class="my-2.5">
       <a
         href="/unete-a-nuestro-equipo/"

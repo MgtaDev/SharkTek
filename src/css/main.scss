@@ -1,3 +1,4 @@
+
 // Fonts
 @import url('https://fonts.cdnfonts.com/css/h-hias-sans');
 @import url('https://fonts.cdnfonts.com/css/nexa');
@@ -5,23 +6,16 @@
 
 h2,
 h3 {
-  // font-family: 'h Hias Sans', sans-serif;
-  // font-family: 'Mont', sans-serif;                                     
-  font-weight: 600;
-  // font-size: 40px !important;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
 }
 
 p,
 ul,
 button {
-  font-family: 'Nexa', sans-serif;
-  // font-family: 'Mont', sans-serif;                                
-  font-weight: 200;
-  // font-size: 18px !important;
-
-
+  font-family: "Smooch Sans", sans-serif;
+  font-weight: 500;
 }
-
 .splide__arrow svg {
   fill: #fff !important;
 }
@@ -291,4 +285,34 @@ button {
     transform: translateY(0);
     opacity: 1;
   }
+}
+.toast {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  font-size: 20px;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  // background-color: #ffffff;
+  // color: black;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translateX(100%); /* Empieza fuera de la pantalla */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0); /* Se mueve a su posición visible */
+}
+
+.hiddenElement {
+  display: none;
 }

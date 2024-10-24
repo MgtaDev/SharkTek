@@ -276,6 +276,8 @@ const { currentLocale } = Astro
                 rows="6"></textarea>
               <div class="flex justify-end">
                 <button
+                type="submit"
+                id="sendButton"
                   class="bg-blue-600 rounded-full 2xl:w-8 2xl:h-8 md:w-7 md:h-7 w-7 h-7 p-[0.2rem] flex justify-center items-center hover:bg-blue-700 cursor-pointer"
                 >
                   <img src="/send.svg" class="ml-[0.1rem] w-[80%] h-auto" />
@@ -290,38 +292,96 @@ const { currentLocale } = Astro
               </button>
             </div> -->
           </form>
+          <div id="toast" class="toast hidden">
+            <p id="toast-message"></p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+         
           <script>
-            let __c2dev_form_contact_inicio!: HTMLFormElement;
-
-            const submitForm = (event: SubmitEvent) => {
-              event.preventDefault();
-
-              const formData = new FormData(__c2dev_form_contact_inicio);
-              let name = formData.get("name");
-              let email = formData.get("email");
-              let number = formData.get("number");
-              let service = formData.get("service-select");
-              let subject = formData.get("subject");
-              let message = formData.get("message");
-              console.debug(`name: "${name}"`);
-              console.debug(`email: "${email}"`);
-              console.debug(`number: "${number}"`);
-              console.debug(`service: "${service}"`);
-              console.debug(`subject: "${subject}"`);
-              console.debug(`message: "${message}"`);
-            };
-
-            document.addEventListener("DOMContentLoaded", (_event) => {
-              __c2dev_form_contact_inicio = document.getElementById(
-                "--c2dev-form-contact-inicio"
-              )!! as HTMLFormElement;
-
-              __c2dev_form_contact_inicio.addEventListener(
-                "submit",
-                submitForm
-              );
+            let loading = false;
+            let __c2dev_form_contact_inicio;
+          
+            document.addEventListener("DOMContentLoaded", () => {
+              __c2dev_form_contact_inicio = document.getElementById("--c2dev-form-contact-inicio");
+              const toast = document.getElementById("toast");
+              const toastMessage = document.getElementById("toast-message");
+          
+              const showToast = (message) => {
+                toastMessage.textContent = message;
+                toast.classList.remove("hidden");
+                toast.classList.add("show");
+          
+                setTimeout(() => {
+                  toast.classList.remove("show");
+                  toast.classList.add("hidden");
+                }, 3000); // Duración de 3 segundos
+              };
+          
+              const submitForm = async (event) => {
+                event.preventDefault();
+          
+                if (loading) return;
+          
+                loading = true;
+                const sendButton = document.getElementById("sendButton");
+                sendButton.innerHTML = '<div class="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>';
+          
+                const formData = new FormData(__c2dev_form_contact_inicio);
+                let name = formData.get("name");
+                let email = formData.get("email");
+                let number = formData.get("number");
+                let service = formData.get("service-select");
+                let subject = formData.get("subject");
+                let message = formData.get("message");
+          
+                try {
+                  const res = await fetch('/api/sendEmail', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                      to: 'passantinodev@gmail.com',
+                      subject: subject,
+                      name: name,
+                      number: number,
+                      text: message,
+                      email: email,
+                      service: service
+                    })
+                  });
+          
+                  if (res.status === 200) {
+                    loading = false;
+                    sendButton.innerHTML = '<img src="/send.svg" class="ml-[0.1rem] w-[80%] h-auto" />';
+                    __c2dev_form_contact_inicio.reset();
+                    showToast("Your message has been sent successfully!");
+                  } else {
+                    showToast("Ops, try again!");
+                  }
+          
+                  const data = await res.json();
+                  console.log(data);
+                } catch (error) {
+                  showToast("Ops, try again!");
+                  console.log(error);
+                } finally {
+                  loading = false;
+                }
+              };
+          
+              __c2dev_form_contact_inicio.addEventListener("submit", submitForm);
+          
+              document.getElementById("sendButton")?.addEventListener('click', (event) => {
+                event.preventDefault();
+                submitForm(event);
+              });
             });
           </script>
+          
+          
         </div>
       </div>
       <div class="w-[50%] flex justify-center items-center fluent:hidden">

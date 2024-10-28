@@ -1,12 +1,21 @@
 import type { APIRoute } from "astro";
 import { Resend } from "resend";
+// const apiKey = process.env.RESEND_API_KEY;
 
-const resend = new Resend('re_19UywneZ_Q6ahxm4MQfB6ykJv3Lfd8xqV');
+// Acceder a la variable de entorno
+const apiKey = import.meta.env.RESEND_API_KEY;
+
+const resend = new Resend(apiKey);
+console.log(apiKey);
+
 console.log(resend);
 
 
 export const POST: APIRoute = async ({ params, request }) => {
   const body = await request.json();
+
+// Usa apiKey en tu lógica de frontend
+console.log("API Key:", apiKey);
   const { subject, text, number, service, email, name } = body;
   console.log(subject, text );
   console.log(resend);

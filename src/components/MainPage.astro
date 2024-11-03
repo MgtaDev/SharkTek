@@ -5,6 +5,7 @@ import C2Navbar from "../components/Navbar.astro";
 
 import "../css/main.scss";
 import "@splidejs/splide/css";
+import LanguagueSwitch from "./LanguagueSwitch.astro";
 
 const { currentLocale } = Astro.props
 console.log(currentLocale)
@@ -33,6 +34,9 @@ console.log(currentLocale)
       <C2Navbar />
       <div id="content" class="w-screen overflow-x-clip overflow-y-auto">
         <slot />
+        <div class=`fixed bottom-6 left-6 bg-gray-100 opacity-3 w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all`> 
+          <LanguagueSwitch/>
+        </div>
       </div>
       <C2Footer />
     </div>

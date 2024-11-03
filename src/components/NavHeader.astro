@@ -2,7 +2,6 @@
 import { FaBars, FaStore } from "react-icons/fa/index";
 import { MdApps, MdPhoneIphone, MdDevices } from "react-icons/md/index";
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import LanguagueSwitch from '../components/LanguagueSwitch.astro'
 
 
 interface Props {
@@ -90,7 +89,7 @@ const { currentLocale } = Astro
   </div>
   <nav
     id={`--c2dev-${idPrefix}navbar-nav`}
-    class="navbar-home mr-4 lg:mr-16 fluent:hidden"
+    class="navbar-home mr-4 lg:mr-10 fluent:hidden"
   >
     <ul class="flex items-center resp:mt-8 resp:flex-col">
       <li class="my-2.5">
@@ -119,11 +118,7 @@ const { currentLocale } = Astro
         {t('nav.about')}
         </a>
       </li>
-      <li>
-        <a href="">
-          <LanguagueSwitch/>
-        </a>
-      </li>
+    
     
     </ul>
     

@@ -9,10 +9,6 @@ import LanguagueSwitch from "./LanguagueSwitch.astro";
 
 const { currentLocale } = Astro.props
 console.log(currentLocale)
-
-const sendWhatsappMessage = () => {
-  window.open("https://wa.me/17865832029", "_blank")
-};
 ---
 
 <html lang={currentLocale} class="light">
@@ -45,13 +41,21 @@ const sendWhatsappMessage = () => {
           location.pathname !== "/dashboard2" 
           ? 
           <div class="flex fixed bottom-0 w-20 right-0 m-2 p-4 rounded-full cursor-pointer">
-          <img onClick={()=> sendWhatsappMessage()} className="w-20 hover:transform hover:scale-110" src={WhatsappIcon} alt=""/>
+          <img id="ws-btn"  class="w-20 hover:transform hover:scale-110" src='/social.png' alt="social"/>
           </div> 
           : ''
        }
       </div>
       <C2Footer />
     </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const wsBtn = document.getElementById("ws-btn");
+        wsBtn.addEventListener("click", () => {
+          window.open("https://wa.me/17865832029", "_blank");
+        })})
+
+    </script>
 
     <!-- Scripts -->
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"

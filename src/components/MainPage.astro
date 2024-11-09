@@ -9,6 +9,10 @@ import LanguagueSwitch from "./LanguagueSwitch.astro";
 
 const { currentLocale } = Astro.props
 console.log(currentLocale)
+
+const sendWhatsappMessage = () => {
+  window.open("https://wa.me/17865832029", "_blank")
+};
 ---
 
 <html lang={currentLocale} class="light">
@@ -37,6 +41,14 @@ console.log(currentLocale)
         <div class=`fixed bottom-6 left-6 bg-gray-100 opacity-3 w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all`> 
           <LanguagueSwitch/>
         </div>
+        {
+          location.pathname !== "/dashboard2" 
+          ? 
+          <div class="flex fixed bottom-0 w-20 right-0 m-2 p-4 rounded-full cursor-pointer">
+          <img onClick={()=> sendWhatsappMessage()} className="w-20 hover:transform hover:scale-110" src={WhatsappIcon} alt=""/>
+          </div> 
+          : ''
+       }
       </div>
       <C2Footer />
     </div>
